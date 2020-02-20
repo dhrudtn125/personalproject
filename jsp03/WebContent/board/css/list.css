@@ -1,0 +1,24 @@
+@charset "UTF-8";
+h2{
+	text-align: center;
+	font-size: 30px;
+}
+body{
+	background-color: #febd76;
+	color:#999;
+}
+
+.search{
+	text-align: center;
+}
+.search-area{
+	border: 5px solid orangered;
+	width:200px;
+	max-width: 600px;
+	
+}
+.subject{
+	text-decoration: underline;
+}
+
+

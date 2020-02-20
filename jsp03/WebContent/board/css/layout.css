@@ -1,0 +1,158 @@
+@charset "UTF-8";
+*{
+		font-size: 10px;
+	}
+body{
+	margin: 0;
+	padding:0;
+	font-size: 1rem;
+}
+.header{
+	
+}
+input[id="menuicon"]{
+	display: none;
+}
+input[id="menuicon"]+label{
+	display: block;
+	width:60px;
+	height:40px;
+	left:0;
+	top:10%;
+	position: fixed;
+	cursor:pointer;
+	transition:all .35s;
+	
+}
+input[id="menuicon"]:checked+label{
+	z-index: 2;
+	left:200px;
+}
+input[id="menuicon"]+label span{
+	display: block;
+	position: absolute;
+	width:100%;
+	height:5px;
+	border-radius: 50px;
+	background: white;
+	transition:all .35s;
+	
+}
+input[id="menuicon"]+label span:nth-child(1){
+	top:0;
+}
+input[id="menuicon"]+label span:nth-child(2){
+	top:50%;
+	transform:translateY(-50%);
+}
+input[id="menuicon"]+label span:nth-child(3){
+	bottom:0;
+}
+input[id="menuicon"]:checked+label span:nth-child(1){
+	top:50%;
+	transform:translateY(-50%) rotate(45deg);
+}
+input[id="menuicon"]:checked+label span:nth-child(2){
+	opacity: 0;
+}
+input[id="menuicon"]:checked+label span:nth-child(3){
+	bottom:50%;
+	transform:translateY(50%) rotate(-45deg);
+}
+input[id="menuicon"]:checked+label+div{
+	left:0;
+}
+.menuslide{
+	background-color: #d7d7d7;
+	
+	text-align: center;
+	position: fixed;
+	top:0;
+	left:-200px;
+	width:200px;	
+	height:100vh;
+	z-index: 1;
+	transition:all .35s;
+}
+.menuslide ul li{
+	margin-top:50%;
+	font-size: 1.5em;
+}
+.bg-main{
+	background-image:url("../images/Preview.x.jpg");
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	padding-top: 10%;
+}
+.bg-main-text{
+	text-align: center;
+	position: relative;
+	padding-bottom:5%;
+	color: white;
+}
+@charset "UTF-8";
+body, ul{
+	margin: 0;
+	padding: 0; 
+}
+li{
+	list-style-type: none;
+}
+a{
+	color:black;
+	text-decoration: none;
+}
+body{
+	background-color: #222;
+}
+.clearfix::after{
+	content:"";
+	display: block;
+	clear:both;
+}
+.wrapper{
+	background-color:white;
+	width:80%;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	min-height: 80vh;
+	border:5px solid black;
+	
+}
+.ad{
+	
+	bottom:0;
+	background-color: red;
+	padding: 20px ;
+}
+@media( min-width: 768px ){
+	*{
+		font-size: 1rem;
+	}
+	
+	.ad{
+		float:right;
+		position: absolute;
+		display: inline-block;
+		top:40%;
+		background-color: red;
+		padding: 20px;
+		right:0;
+		width:100px;
+		height:300px;
+		font-size: 12px;
+		text-align: center;
+		z-index: 50;
+	}
+}
+.footer{
+	position: absolute;
+	bottom:0;
+	width:100%;
+	height:100px;
+	text-align: center;
+	background-color: #e9c2b1;
+	color:white;
+}
